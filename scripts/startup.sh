@@ -18,4 +18,4 @@ sudo nvidia-docker-plugin &
 # sudo rm -r /var/lib/nvidia-docker
 
 # If you wish to run noVNC
-# /opt/noVNC/utils/launch.sh --vnc localhost:5901
+/opt/noVNC/utils/launch.sh --vnc localhost:5901
