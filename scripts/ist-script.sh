@@ -50,6 +50,25 @@ cd ~/ist-robotics/robots/movo/
 catkin_make
 source devel/setup.bash
 
+# pip install
+cd ~
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python2 get-pip.py
+
+
+
+# gym install
+cd ~
+git clone https://github.com/openai/gym.git
+cd gym
+pip install --user -e .
+
+# Tensorflow install
+cd ~
+pip install --user --upgrade tensorflow
+
+
+
 # Terminator install
 sudo add-apt-repository -y ppa:gnome-terminator
 sudo apt-get update
