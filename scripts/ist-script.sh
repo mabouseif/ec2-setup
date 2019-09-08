@@ -14,6 +14,8 @@ rosdep update
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
+echo "alias killgazebogym='killall -9 rosout roslaunch rosmaster gzserver nodelet robot_state_publisher gzclient'" >> ~/.bashrc
+
 sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
 
 sudo apt-get install -y ros-kinetic-desktop-full ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control ros-kinetic-ros-control
@@ -78,11 +80,12 @@ sudo update-alternatives --config x-terminal-emulator
 
 
 
+echo ""
+echo "******************************************************************"
+echo "*                                                                *"
+echo "*                 IST installation is done! Rebooting!           *"
+echo "*                                                                *"
+echo "******************************************************************"
+echo ""
 
-echo ""
-echo "******************************************************************"
-echo "*                                                                *"
-echo "*                 IST installation is done!                      *"
-echo "*                                                                *"
-echo "******************************************************************"
-echo ""
+sudo reboot
