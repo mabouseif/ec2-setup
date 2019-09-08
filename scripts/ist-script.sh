@@ -6,7 +6,7 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 
 sudo apt-get update
 
-sudo apt-get install ros-kinetic-desktop-full
+sudo apt-get install -y ros-kinetic-desktop-full
 
 sudo rosdep init
 rosdep update
@@ -14,13 +14,13 @@ rosdep update
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
-sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo apt install -y python-rosinstall python-rosinstall-generator python-wstool build-essential
 
-sudo apt-get install ros-kinetic-desktop-full ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control ros-kinetic-ros-control
+sudo apt-get install -y ros-kinetic-desktop-full ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control ros-kinetic-ros-control
 
-sudo apt-get install ros-kinetic-ros-controllers ros-kinetic-moveit ros-kinetic-navigation ros-kinetic-hector-gazebo-plugins ros-kinetic-yocs-cmd-vel-mux
+sudo apt-get install -y ros-kinetic-ros-controllers ros-kinetic-moveit ros-kinetic-navigation ros-kinetic-hector-gazebo-plugins ros-kinetic-yocs-cmd-vel-mux
 
-sudo apt-get install build-essential cmake pkg-config libusb-1.0-0-dev libturbojpeg libjpeg-turbo8-dev libglfw3-dev libopenni2-dev
+sudo apt-get install -y build-essential cmake pkg-config libusb-1.0-0-dev libturbojpeg libjpeg-turbo8-dev libglfw3-dev libopenni2-dev
 cd ~ 
 git clone https://github.com/OpenKinect/libfreenect2.git 
 cd libfreenect2 
