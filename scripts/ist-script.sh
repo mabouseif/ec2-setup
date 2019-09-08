@@ -20,7 +20,20 @@ sudo apt-get install -y ros-kinetic-desktop-full ros-kinetic-gazebo-ros-pkgs ros
 
 sudo apt-get install -y ros-kinetic-ros-controllers ros-kinetic-moveit ros-kinetic-navigation ros-kinetic-hector-gazebo-plugins ros-kinetic-yocs-cmd-vel-mux
 
+# Freenect dep
 sudo apt-get install -y build-essential cmake pkg-config libusb-1.0-0-dev libturbojpeg libjpeg-turbo8-dev libglfw3-dev libopenni2-dev
+
+# Linking fix
+sudo rm /usr/lib/x86_64-linux-gnu/libGL.so
+sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1.7.0 /usr/lib/x86_64-linux-gnu/libGL.so
+
+
+sudo ln -s /usr/lib/python2.7/dist-packages/vtk/libvtkRenderingPythonTkWidgets.x86_64-linux-gnu.so /usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so
+
+sudo rm /usr/lib/x86_64-linux-gnu/libEGL.so
+sudo ln /usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0 /usr/lib/x86_64-linux-gnu/libEGL.so
+
+# Freenect install
 cd ~ 
 git clone https://github.com/OpenKinect/libfreenect2.git 
 cd libfreenect2 
@@ -30,9 +43,10 @@ make
 sudo make install 
 sudo cp ../platform/linux/udev/90-kinect2.rules /etc/udev/rules.d/ 
 
-sudo ln -s /usr/lib/python2.7/dist-packages/vtk/libvtkRenderingPythonTkWidgets.x86_64-linux-gnu.so /usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so
+# sudo ln -s /usr/lib/python2.7/dist-packages/vtk/libvtkRenderingPythonTkWidgets.x86_64-linux-gnu.so /usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so
 
-cd ~/ist-robotics/robots/movo/src
+
+cd ~/ist-robotics/robots/movo/
 catkin_make
 source devel/setup.bash
 
