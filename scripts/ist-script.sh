@@ -51,7 +51,7 @@ catkin_make
 source devel/setup.bash
 
 # Terminator install
-sudo add-apt-repository ppa:gnome-terminator
+sudo add-apt-repository -y ppa:gnome-terminator
 sudo apt-get update
 sudo apt-get install -y terminator
 
