@@ -50,6 +50,16 @@ cd ~/ist-robotics/robots/movo/
 catkin_make
 source devel/setup.bash
 
+# Terminator install
+sudo add-apt-repository ppa:gnome-terminator
+sudo apt-get update
+sudo apt-get install -y terminator
+
+sudo update-alternatives --config x-terminal-emulator
+
+
+
+
 echo ""
 echo "******************************************************************"
 echo "*                                                                *"
